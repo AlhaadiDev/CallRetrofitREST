@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="Username:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_username" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" app:layout_constraintBottom_toBottomOf="@+id/edtUsername"
+            app:layout_constraintTop_toTopOf="@+id/edtUsername"/>
+    <TextView
+            android:text="Password:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_password" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="@+id/edtPassword" app:layout_constraintBottom_toBottomOf="@+id/edtPassword"/>
+    <Button
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_submit" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtUsername"
+            app:layout_constraintStart_toEndOf="@+id/txt_username" android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent" android:hint="Username"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|textVisiblePassword"
+            android:ems="10"
+            android:id="@+id/edtPassword"
+            app:layout_constraintStart_toEndOf="@+id/txt_password"
+            android:layout_marginLeft="10dp" android:layout_marginStart="10dp" android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="20dp" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/edtUsername" android:hint="Password"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline"
+                                          android:orientation="vertical"
+                                          app:layout_constraintGuide_percent="0.052083332"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName" android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_submit" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:textSize="30sp"/>
+    <Button
+            android:text="Scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_scan" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_submit" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+</android.support.constraint.ConstraintLayout>
