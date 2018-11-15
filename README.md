@@ -7,12 +7,12 @@ Retrofit
 
 **1. Declare Constant variables**
 
-    public static String SERVER_DOMAIN = "http://mymooban.globaltium.com";
-    public static String SERVER = SERVER_DOMAIN + "/api/v2/";
+    public static String SERVER_DOMAIN = "you link here";
+    public static String SERVER = SERVER_DOMAIN + "";
 
 **2. Create preferences**
 
-public class LocalData {
+    public class LocalData {
     private static LocalData localData;
     private static SharedPreferences preferences;
 
@@ -40,7 +40,7 @@ public class LocalData {
 
 **3. Create one class to extend Application**
 
-public class MyApplication extends Application {
+    public class MyApplication extends Application {
     private static MyApplication myApplication;
 
     public static MyApplication getInstance(){
@@ -63,7 +63,7 @@ public class MyApplication extends Application {
 
 **5. Create Retrofit class**
 
-public class RetrofitRequest {
+    public class RetrofitRequest {
     private static Retrofit retrofit;
     private static Retrofit retrofit2;
 
@@ -97,7 +97,7 @@ public class RetrofitRequest {
 
 **6. Create ApiService Interface**
 
-public interface ApiServiceInterface {
+    public interface ApiServiceInterface {
 
     @POST("/oauth/token")
     Call<JsonObject> postAccessToken(@Body HashMap<String, String> inputParams);
@@ -111,10 +111,10 @@ public interface ApiServiceInterface {
 
 **7. Call the API and get information**
 
-   private void getUser() {
+     private void getUser() {
         MyProperties.ShowLogD("onclick","getUser");
         ApiServiceInterface apiSevice = RetrofitRequest.getRetrofitRequest().create(ApiServiceInterface.class);
-        Call<JsonObject> call = apiSevice.userDetails("Bearer " + LocalData.getInstance().loadString(LocalData.SP_KEY_ACCESS_TOKEN),"139");
+        Call<JsonObject> call = apiSevice.userDetails("Bearer " +                  LocalData.getInstance().loadString(LocalData.SP_KEY_ACCESS_TOKEN),"139");
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
